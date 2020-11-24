@@ -1,4 +1,3 @@
-from numpy import binary_repr
 import re
 import doctest
 
@@ -20,7 +19,7 @@ def fantz(binary_number, number):
     for i in range(len(binary_number)):
         if len(list_of_powers[i]) >= len(binary_number):
             break
-        list_of_powers.append(binary_repr(number**(i+1)))
+        list_of_powers.append(bin(number**(i+1))[2:])
     list_of_powers.reverse()
 
     for power in list_of_powers:
